@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clientes</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <div class="container py-4">
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Nombre</th>
+          <th scope="col">Ubicacion</th>
+          <th scope="col">Correo</th>
+          <th scope="col">Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">1</th>
+          <td>Mark</td>
+          <td>Otto</td>
+          <td>@mdo</td>
+          <td><a class="btn bi bi-pencil-fill" data-bs-toggle="modal" data-bs-target="#exampleModal"></a><a
+              class="btn bi bi-trash-fill" href="#"></a><a class="btn bi bi-eye-fill" href="formCl.html"></a></td>
+        </tr>
+        <tr>
+          <th scope="row">2</th>
+          <td>Jacob</td>
+          <td>Thornton</td>
+          <td>@fat</td>
+          <td><a class="btn bi bi-pencil-fill" data-bs-toggle="modal" data-bs-target="#exampleModal"></a><a
+              class="btn bi bi-trash-fill" href="#"></a><a class="btn bi bi-eye-fill" href="formCl.html"></a></td>
+        </tr>
+        <tr>
+          <th scope="row">3</th>
+          <td colspan="2">Larry the Bird</td>
+          <td>@twitter</td>
+          <th><a class="btn bi bi-pencil-fill" data-bs-toggle="modal" data-bs-target="#exampleModal"></a><a
+              class="btn bi bi-trash-fill" href="#"></a><a class="btn bi bi-eye-fill" href="formCl.html"></a></th>
+        </tr>
+        <tr>
+          <th scope="row">4</th>
+          <td colspan="2">Larry tde Bird</td>
+          <td>@twitter</td>
+          <td><a class="btn bi bi-pencil-fill" data-bs-toggle="modal" data-bs-target="#exampleModal"></a><a
+              class="btn bi bi-trash-fill" href="#"></a><a class="btn bi bi-eye-fill" href="formCl.html"></a></td>
+        </tr>
+        <tr>
+          <th scope="row">5</th>
+          <td colspan="2">Larry the Bird</td>
+          <td>@twitter</td>
+          <td><a class="btn bi bi-pencil-fill" data-bs-toggle="modal" data-bs-target="#exampleModal"></a><a
+              class="btn bi bi-trash-fill" href="#"></a><a class="btn bi bi-eye-fill" href="formCl.html"></a></td>
+        </tr>
+        <tr>
+          <th scope="row">6</th>
+          <td colspan="2">Larry the Bird</td>
+          <td>@twitter</td>
+          <td><a class="btn bi bi-pencil-fill" data-bs-toggle="modal" data-bs-target="#exampleModal"></a><a
+              class="btn bi bi-trash-fill" href="#"></a><a class="btn bi bi-eye-fill" href="formCl.html"></a></td>
+        </tr>
+        <tr>
+          <th scope="row">7</th>
+          <td colspan="2">Larry the Bird</td>
+          <td>@twitter</td>
+          <td><a class="btn bi bi-pencil-fill" data-bs-toggle="modal" data-bs-target="#exampleModal"></a><a
+              class="btn bi bi-trash-fill" href="#"></a><a class="btn bi bi-eye-fill" href="formCl.html"></a></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="container">
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"
+      data-bs-whatever="@mdo">Crear</button>
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
+      <div class="modal-dialog  modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="ModalLabel">Clientes</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form class="needs-validation row g-3" novalidate>
+              <div class="input-group">
+                <span class="input-group-text">Nombre:</span>
+                <label for="validationNombre" class="form-label"></label>
+                <input type="text" aria-label="nombre" class="form-control" id="validationNombre"
+                  placeholder="Ingrese su nombre completo..."
+                  pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{2,48}"
+                  required />
+                <div class="valid-feedback">
+                  Excelente!
+                </div>
+                <div class="invalid-feedback">
+                  Ingrese su nombre nuevamente!
+                </div>
+              </div>
+              <div class="input-group">
+                <span class="input-group-text">Dirección:</span>
+                <label for="validationUbicacion" class="form-label"></label>
+                <input type="text" aria-label="nombre" class="form-control" id="validationUbicacion"
+                  placeholder="Ingrese su dirección..."
+                  pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{2,48}"
+                  required />
+                <div class="valid-feedback">
+                  Excelente!
+                </div>
+                <div class="invalid-feedback">
+                  Ingrese su dirección nuevamente!
+                </div>
+              </div>
+              <div class="input-group">
+                <span class="input-group-text">RFC:</span>
+                <label for="validationRFC" class="form-label"></label>
+                <input type="text" aria-label="nombre" class="form-control" id="validationRFC"
+                  placeholder="Ingrese su RFC..." required maxlength="13"
+                  pattern="\b[A-Z][AEIOU][A-Z]{2}[0-9]{2}(?:0[1-9]|1[0-2])(?:[1-2][0-9]|0[1-9]|3[0-1])[A-Z0-9]{2}[0-9A]\b">
+                <div class="valid-feedback">
+                  Excelente!
+                </div>
+                <div class="invalid-feedback">
+                  Ingrese su RFC nuevamente!
+                </div>
+              </div>
+              <div class="input-group">
+                <span class="input-group-text">Email:</span>
+                <label for="validationEmail" class="form-label"></label>
+                <input class="form-control" type="email" name="correo" id="validationEmail"
+                  placeholder="Ingrese su correo..."
+                  pattern="^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$" required />
+                <span class="input-group-text">Telefono:</span>
+                <label for="validationTel" class="form-label"></label>
+                <input class="form-control" type="tel" name="tel" id="validationTel"
+                  placeholder="Ingrese su telefono..." pattern="^[0-9\s]+$" required maxlength="10">
+                <div class="valid-feedback">
+                  Excelente!
+                </div>
+                <div class="invalid-feedback">
+                  Ingrese los datos nuevamente!
+                </div>
+              </div>
+              <div class="modal-footer col-12 mt-4">
+                <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="submit" class="btn btn-outline-primary">Registrar</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+<script>
+  // Example starter JavaScript for disabling form submissions if there are invalid fields
+  (() => {
+    'use strict'
+
+    // Fetch all the forms we want to apply custom Bootstrap validation styles to
+    const forms = document.querySelectorAll('.needs-validation')
+
+    // Loop over them and prevent submission
+    Array.from(forms).forEach(form => {
+      form.addEventListener('submit', event => {
+        if (!form.checkValidity()) {
+          event.preventDefault()
+          event.stopPropagation()
+        }
+
+        form.classList.add('was-validated')
+      }, false)
+    })
+  })()
+</script>
+
+</html>
