@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Realizar Pago</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h2>Realizar Pago</h2>
+    <form id="formPago">
+        <input type="text" name="matricula" placeholder="Matrícula" required>
+        <select name="tipoPago" required>
+            <option value="">Selecciona un tipo de pago</option>
+            <option value="mensualidad">Mensualidad</option>
+            <option value="reinscripcion">Reinscripción</option>
+            <option value="extraordinario">Extraordinario</option>
+        </select>
+        <button type="submit">Pagar</button>
+    </form>
+
+    <script>
+        document.getElementById('formPago').addEventListener('submit', async function(event) {
+            event.preventDefault();
+            const formData = new FormData(this);
+            const data = Object.fromEntries(formData.entries());
+
+            try {
+                const response = await fetch('http://localhost:5000/api/pagos', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(data)
+                });
+
+                if (response.ok) {
+                    alert('Pago realizado con éxito');
+                    this.reset();
+                } else {
+                    alert('Error al procesar el pago');
+                }
+            } catch (error) {
+                alert('Error de conexión con el servidor');
+                console.error(error);
+            }
+        });
+    </script>
+</body>
+</html>
